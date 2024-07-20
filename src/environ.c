@@ -334,13 +334,13 @@ static int l_setenv_win(lua_State *L){
 }
 
 static int l_update_win(lua_State *L){
-  DWORD dwReturnValue;
+  DWORD_PTR dwReturnValue;
   LRESULT ret = SendMessageTimeout(HWND_BROADCAST, WM_SETTINGCHANGE, 0,
     (LPARAM) "Environment", SMTO_ABORTIFHUNG,
     5000, &dwReturnValue
   );
   if(ret){
-    lua_pushnumber(L,dwReturnValue);
+    lua_pushnumber(L,(lua_Number)dwReturnValue);
     return 1;
   }
 
