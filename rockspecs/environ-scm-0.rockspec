@@ -2,7 +2,7 @@ package = "environ"
 version = "scm-0"
 source = {
   url = "https://github.com/sebthom/hx-lua-environ/archive/master.zip",
-  dir = "lua-environ-master",
+  dir = "hx-lua-environ-master",
 }
 description = {
   summary = "Manipulate with environment variables",
