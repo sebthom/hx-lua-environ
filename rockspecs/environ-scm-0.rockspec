@@ -1,7 +1,7 @@
 package = "environ"
 version = "scm-0"
 source = {
-  url = "https://github.com/moteus/lua-environ/archive/master.zip",
+  url = "https://github.com/sebthom/hx-lua-environ/archive/master.zip",
   dir = "lua-environ-master",
 }
 description = {
@@ -22,7 +22,8 @@ build = {
     windows = {
       modules = {
         ["environ.core"] = {
-          libraries = {"user32"},
+          -- commented out to fix https://github.com/moteus/lua-environ/issues/1
+          -- libraries = {"user32"},
         }
       }
     }
@@ -39,15 +40,5 @@ build = {
     [ "environ.win32.system"  ] = "src/lua/environ/win32/system.lua",
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
